@@ -1,10 +1,13 @@
-import { StyleSheet, Text, View } from "react-native";
+import { Image, StyleSheet, Text, View } from "react-native";
 import React from "react";
 
 export default function Header() {
   return (
     <View style={styles.container}>
-      <Text>Header</Text>
+      <Image
+        source={require("../assets/react-native.png")}
+        style={styles.img}
+      />
     </View>
   );
 }
@@ -15,5 +18,10 @@ const styles = StyleSheet.create({
     height: 60,
     justifyContent: "center",
     paddingHorizontal: 16,
+  },
+  img: {
+    resizeMode: "contain",
+    height: 50,
+    width: 50,
   },
 });
