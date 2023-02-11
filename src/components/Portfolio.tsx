@@ -17,26 +17,22 @@ export default function Portfolio() {
   const { fontScale } = useWindowDimensions();
 
   const titleStyle = [typography(fontScale).h1, { marginBottom: 80 }];
-  const projectDescriptionStyle = [
-    typography(fontScale).p,
-    // { marginBottom: 16 },
-  ];
 
-  const renderProject = (item: Project) => {
+  const RenderProject = ({ item }: { item: Project }) => {
     return (
-      <View key={item.id} style={styles.project}>
+      <View style={styles.project}>
         <Text style={typography(fontScale).h3}>{item.title}</Text>
         <Image source={{ uri: item.image }} style={styles.projectImg} />
-        <Text style={projectDescriptionStyle}>{item.description}</Text>
+        <Text style={typography(fontScale).p}>{item.description}</Text>
         <View>
-          <Text style={[projectDescriptionStyle, { marginBottom: 12 }]}>
+          <Text style={[typography(fontScale).p, { marginBottom: 12 }]}>
             Technologies:
           </Text>
           <View style={styles.technologies}>
             {item.technologies.map((tech) => {
               const imgSource = TechStackIcon.GetImage(tech);
               return (
-                <View style={commanyStyles.row}>
+                <View style={commanyStyles.row} key={tech}>
                   {imgSource && (
                     <Image source={imgSource} style={styles.techImage} />
                   )}
@@ -47,7 +43,7 @@ export default function Portfolio() {
           </View>
         </View>
         <View>
-          <Text style={[projectDescriptionStyle, { marginBottom: 12 }]}>
+          <Text style={[typography(fontScale).p, { marginBottom: 12 }]}>
             View the app on:
           </Text>
           <View style={[commanyStyles.row, { gap: 16 }]}>
@@ -65,7 +61,9 @@ export default function Portfolio() {
   return (
     <View style={styles.container}>
       <Text style={titleStyle}>Portfolio</Text>
-      {projects.map((project) => renderProject(project))}
+      {projects.map((project) => (
+        <RenderProject key={project.id} item={project} />
+      ))}
     </View>
   );
 }
