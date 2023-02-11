@@ -1,0 +1,38 @@
+[
+  {
+    "id": "filter",
+    "title": "Filter App",
+    "image": "https://www.upwork.com/att/download/portfolio/persons/uid/1151920542615367680/profile/projects/files/88f429d7-2bbf-442a-9cfa-aff584fc1f58",
+    "description": "Filter is a healthcare app that monitors your condition and gives you access to a clinically proven program that reduces the anxiety caused by COPD.  It combines all the areas of your management and teaches you ways to improve how you manage your condition - all hyper-personalized.",
+    "technologies": ["JavaScript", "TypeScript", "React Native", "Redux"],
+    "app_store_link": "",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.joinfilter.customer"
+  },
+  {
+    "id": "iman",
+    "title": "Iman App",
+    "image": "https://www.upwork.com/att/download/portfolio/persons/uid/1151920542615367680/profile/projects/files/5303444f-ca75-4e6e-ab2c-148ed2346141",
+    "description": "Iman is built to help everyone practice the beautiful religion of Islam. It includes prayer reminders, daily audio lessons, and Qu'ran readings.",
+    "technologies": ["TypeScript", "React Native", "Redux"],
+    "app_store_link": "",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.zeno.iman"
+  },
+  {
+    "id": "immo",
+    "title": "Ton Enchère Immo",
+    "image": "https://www.upwork.com/att/download/portfolio/persons/uid/1151920542615367680/profile/projects/files/46dbf55e-0b2e-4c2c-89a0-b56eb2187f70",
+    "description": "A tool for professionals to help them be super efficient at auctions, get potential profit in seconds and save time. The algorithm does all the homework from calculating (taxes, fees..) and all other charges with the click of a button!",
+    "technologies": ["TypeScript", "React Native", "Redux", "Firebase"],
+    "app_store_link": "https://apple.co/3qYGOWu",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.tonenchereimmo"
+  },
+  {
+    "id": "mdc",
+    "title": "Local Masjid App (MDC)",
+    "image": "https://www.upwork.com/att/download/portfolio/persons/uid/1151920542615367680/profile/projects/files/9412648b-53dd-43ff-aa96-4347907ed3bc",
+    "description": "Local Masjid is an all-in-one mobile application for Muslims. It helps them find nearby Mosques, read and listen to the Quran, and get prayer times. Local Masjid offers all that and more!",
+    "technologies": ["JavaScript", "React Native", "Redux"],
+    "app_store_link": "https://apple.co/2F7v51K",
+    "play_store_link": "https://play.google.com/store/apps/details?id=com.mdcandroid"
+  }
+]

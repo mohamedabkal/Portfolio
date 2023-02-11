@@ -1,15 +1,14 @@
-import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, View } from "react-native";
 import Header from "./src/components/Header";
 import HeroSection from "./src/components/HeroSection";
+import Portfolio from "./src/components/Portfolio";
 
 export default function App() {
   return (
     <View style={styles.container}>
       <Header />
       <HeroSection />
-      <Text>Open up App.tsx to start working on your app!</Text>
-      <StatusBar style="auto" />
+      <Portfolio />
     </View>
   );
 }
@@ -19,6 +18,5 @@ const styles = StyleSheet.create({
     flex: 1,
     backgroundColor: "#fff",
     alignItems: "center",
-    maxWidth: 1000,
   },
 });

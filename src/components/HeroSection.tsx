@@ -35,8 +35,6 @@ export default function HeroSection() {
 const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
-    width: "100%",
-    alignItems: "center",
   },
   buttons: {
     ...commanyStyles.row,

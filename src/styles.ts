@@ -16,6 +16,11 @@ export const typography = (fontScale: number) =>
     },
     p: {
       fontSize: 16 / fontScale,
+      lineHeight: 22 / fontScale,
+    },
+    sp: {
+      fontSize: 12 / fontScale,
+      lineHeight: 19 / fontScale,
     },
   });
 
@@ -23,6 +28,8 @@ export const colors = {
   tint: "green",
   white: "#fff",
   primaryFontColor: "#333333",
+  secondaryFontColor: "#999",
+  black: "#000",
 };
 
 export const commanyStyles = StyleSheet.create({
