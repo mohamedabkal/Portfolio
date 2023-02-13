@@ -5,22 +5,24 @@ export const typography = (fontScale: number) =>
     h1: {
       fontSize: 40 * fontScale,
       fontWeight: "bold",
-      color: colors.primaryFontColor,
+      color: colors.white,
       fontFamily: "FiraCode-Bold",
     },
     h2: {
       fontSize: 32 / fontScale,
-      color: colors.primaryFontColor,
+      color: colors.white,
       fontFamily: "FiraCode-Bold",
     },
     h3: {
       fontSize: 24 / fontScale,
       fontFamily: "FiraCode-Bold",
+      color: colors.white,
     },
     p: {
       fontSize: 16 / fontScale,
       lineHeight: 26 / fontScale,
       fontFamily: "FiraCode-Regular",
+      color: colors.white,
     },
     sp: {
       fontSize: 12 / fontScale,
@@ -30,11 +32,17 @@ export const typography = (fontScale: number) =>
   });
 
 export const colors = {
-  tint: "green",
-  white: "#fff",
-  primaryFontColor: "#333333",
+  tint: "#4fc1ff",
+  green: "#4ec9b0",
+  orange: "#ce9178",
+  yellow: "#dcdcaa",
+  white: "#d4d4d4",
+  gray: "#808080",
+  darkGray: "#404040",
+  primaryFontColor: "#d4d4d4",
   secondaryFontColor: "#999",
-  black: "#000",
+  dark: "#1e1e1e",
+  lightDark: "#252526",
 };
 
 export const commanyStyles = StyleSheet.create({

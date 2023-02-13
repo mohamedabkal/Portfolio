@@ -8,6 +8,7 @@ import {
 import React from "react";
 import { typography } from "../styles";
 import Button from "./Button";
+import CodeBlock from "./CodeBlock";
 
 export default function Contact() {
   const { fontScale } = useWindowDimensions();
@@ -17,26 +18,25 @@ export default function Contact() {
 
   return (
     <View style={styles.container}>
-      <Text style={[typography(fontScale).h1]}>Get In Touch</Text>
-      <Text
-        style={[
-          typography(fontScale).p,
-          { textAlign: "center", marginVertical: 48 },
-        ]}
-      >
-        Whether you want to build a new mobile app from scratch, update an
-        existing app, or troubleshoot technical issues, I'm here to help.
-      </Text>
-      <Button title="Contact Me On Upwork" onPress={openUpwork} />
+      <CodeBlock name="GetInTouch">
+        <View style={{ flex: 1, marginVertical: 32 }}>
+          <Text style={[typography(fontScale).p, { marginBottom: 32 }]}>
+            Whether you want to build a new mobile app from scratch, update an
+            existing app, or troubleshoot technical issues, I'm here to help.
+          </Text>
+          <Button title="Contact Me On Upwork" onPress={openUpwork} />
+        </View>
+      </CodeBlock>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    maxWidth: 500,
-    alignItems: "center",
+    width: "100%",
+    maxWidth: 550,
     paddingHorizontal: 16,
-    paddingVertical: 100,
+    marginTop: 160,
+    marginBottom: 100,
   },
 });

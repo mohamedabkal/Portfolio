@@ -25,10 +25,7 @@ export default function Button(props: Props) {
       ]}
     >
       <Text
-        style={[
-          typography(fontScale).p,
-          { color: props.color || colors.white },
-        ]}
+        style={[typography(fontScale).p, { color: props.color || colors.dark }]}
       >
         {props.title}
       </Text>

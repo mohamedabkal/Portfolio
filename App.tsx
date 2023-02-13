@@ -5,6 +5,7 @@ import Portfolio from "./src/components/Portfolio";
 import { useFonts } from "expo-font";
 import Contact from "./src/components/Contact";
 import { useRef } from "react";
+import { colors } from "./src/styles";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -21,7 +22,7 @@ export default function App() {
   };
 
   return (
-    <View style={StyleSheet.absoluteFill}>
+    <View style={[StyleSheet.absoluteFill, { backgroundColor: colors.dark }]}>
       <ScrollView ref={scrollViewRef} contentContainerStyle={styles.container}>
         <Header />
         <HeroSection scrollToPortfolio={scrollToPortfolio} />
@@ -35,6 +36,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    backgroundColor: "#fff",
   },
 });

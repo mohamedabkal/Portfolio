@@ -25,11 +25,12 @@ export default function StoresButton(props: Props) {
       <Ionicons
         name={props.platform === "ios" ? "logo-apple" : "logo-google-playstore"}
         size={18}
+        color={colors.white}
       />
-      <Text style={[typography(fontScale).sp]}>
+      <Text style={[typography(fontScale).sp, { color: colors.white }]}>
         {props.platform === "ios" ? "App Store" : "Google Play"}
       </Text>
-      <Ionicons name="open-outline" size={18} />
+      <Ionicons name="open-outline" size={18} color={colors.white} />
     </Pressable>
   );
 }
@@ -41,6 +42,7 @@ const styles = StyleSheet.create({
     padding: 6,
     borderRadius: 5,
     borderWidth: 1,
-    gap: 5,
+    borderColor: colors.white,
+    gap: 8,
   },
 });
