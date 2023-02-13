@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
   },
   project: {
     width: "100%",
-    gap: 20,
+    gap: 24,
   },
   projectImg: {
     width: "100%",
@@ -99,6 +99,6 @@ const styles = StyleSheet.create({
     ...commanyStyles.row,
     width: "100%",
     flexWrap: "wrap",
-    gap: 16,
+    gap: 12,
   },
 });

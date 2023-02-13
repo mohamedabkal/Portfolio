@@ -6,21 +6,25 @@ import CodeBlock from "./CodeBlock";
 
 export default function HeroSection(props: { scrollToPortfolio: () => void }) {
   const { height, width, fontScale } = Dimensions.get("screen");
+
+  const bigTitleStyle = [
+    typography(fontScale).h2,
+    { lineHeight: 55 / fontScale },
+  ];
+
   return (
-    <View style={[styles.container, { height: height - 60 }]}>
+    <View style={[styles.container, { height: height < 800 ? 800 : height }]}>
       <CodeBlock name="AboutMe">
-        <View style={{ flex: 1, marginVertical: 32 }}>
-          <Text style={typography(fontScale).h2}>Hello! My name is</Text>
-          <Text
-            style={[
-              typography(fontScale).h1,
-              { marginVertical: 12, color: colors.orange },
-            ]}
-          >
-            Mohammad Abkal
+        <View style={{ flex: 1, marginVertical: 24 }}>
+          <Text style={bigTitleStyle}>
+            Hello! My name is
+            <Text style={[typography(fontScale).h1, { color: colors.orange }]}>
+              {" "}
+              Mohammad Abkal.
+            </Text>
           </Text>
-          <Text style={typography(fontScale).h2}>I'm a mobile developer.</Text>
-          <Text style={[typography(fontScale).p, { marginTop: 32 }]}>
+          <Text style={bigTitleStyle}>I'm a mobile developer.</Text>
+          <Text style={[typography(fontScale).p, { marginTop: 24 }]}>
             I build cross-platform mobile apps with React Native and Expo.
           </Text>
         </View>
@@ -51,5 +55,6 @@ const styles = StyleSheet.create({
   buttons: {
     ...commanyStyles.row,
     marginTop: 56,
+    flexWrap: "wrap",
   },
 });

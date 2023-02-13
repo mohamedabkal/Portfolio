@@ -10,7 +10,7 @@ import {
 import React from "react";
 import { colors, commanyStyles, typography } from "../styles";
 
-const { width } = Dimensions.get("screen");
+const { width, height } = Dimensions.get("screen");
 
 export default function CodeBlock(props: {
   children: React.ReactElement;

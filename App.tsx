@@ -6,6 +6,7 @@ import { useFonts } from "expo-font";
 import Contact from "./src/components/Contact";
 import { useRef } from "react";
 import { colors } from "./src/styles";
+import WhyMe from "./src/components/WhyMe";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -18,15 +19,16 @@ export default function App() {
   const scrollViewRef = useRef<ScrollView>(null);
 
   const scrollToPortfolio = () => {
-    scrollViewRef.current?.scrollTo({ x: 0, y: height, animated: true });
+    scrollViewRef.current?.scrollTo({ x: 0, y: height + 175, animated: true });
   };
 
   return (
     <View style={[StyleSheet.absoluteFill, { backgroundColor: colors.dark }]}>
       <ScrollView ref={scrollViewRef} contentContainerStyle={styles.container}>
-        <Header />
+        {/* <Header /> */}
         <HeroSection scrollToPortfolio={scrollToPortfolio} />
         <Portfolio />
+        <WhyMe />
         <Contact />
       </ScrollView>
     </View>
@@ -36,5 +38,7 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
+    gap: 250,
+    paddingBottom: 250,
   },
 });
