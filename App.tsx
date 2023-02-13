@@ -19,7 +19,7 @@ export default function App() {
   const scrollViewRef = useRef<ScrollView>(null);
 
   const scrollToPortfolio = () => {
-    scrollViewRef.current?.scrollTo({ x: 0, y: height + 175, animated: true });
+    scrollViewRef.current?.scrollTo({ x: 0, y: height, animated: true });
   };
 
   return (
@@ -38,7 +38,6 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    gap: 250,
     paddingBottom: 250,
   },
 });

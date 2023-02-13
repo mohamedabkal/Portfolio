@@ -1,5 +1,4 @@
 import {
-  Dimensions,
   StyleSheet,
   Text,
   TextStyle,
@@ -9,8 +8,6 @@ import {
 } from "react-native";
 import React from "react";
 import { colors, commanyStyles, typography } from "../styles";
-
-const { width, height } = Dimensions.get("screen");
 
 export default function CodeBlock(props: {
   children: React.ReactElement;
@@ -61,6 +58,6 @@ const styles = StyleSheet.create({
     backgroundColor: colors.darkGray,
     width: 2,
     height: "100%",
-    marginRight: width * 0.02,
+    marginRight: 16,
   },
 });

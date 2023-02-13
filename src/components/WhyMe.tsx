@@ -43,6 +43,7 @@ const styles = StyleSheet.create({
     width: "100%",
     maxWidth: 550,
     paddingHorizontal: 16,
+    marginTop: 150,
   },
   innerContainer: {
     flex: 1,

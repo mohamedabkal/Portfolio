@@ -19,10 +19,7 @@ export default function Portfolio() {
   const RenderProject = ({ item }: { item: Project }) => {
     return (
       <View style={styles.project}>
-        <Text style={typography(fontScale).h3}>
-          {"* "}
-          {item.title}
-        </Text>
+        <Text style={typography(fontScale).h3}>{item.title}</Text>
         <Image source={{ uri: item.image }} style={styles.projectImg} />
         <Text style={typography(fontScale).p}>{item.description}</Text>
         <View>
