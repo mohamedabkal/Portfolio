@@ -21,7 +21,7 @@
     "id": "immo",
     "title": "Ton Enchère Immo",
     "image": "https://www.upwork.com/att/download/portfolio/persons/uid/1151920542615367680/profile/projects/files/46dbf55e-0b2e-4c2c-89a0-b56eb2187f70",
-    "description": "A tool for professionals to help them be super efficient at auctions, get potential profit in seconds and save time. The algorithm does all the homework from calculating (taxes, fees..) and all other charges with the click of a button!",
+    "description": "A tool for professionals to help them be super efficient at auctions, get potential profit in seconds and save time. The algorithm does all the homework from calculating taxes, fees, and all other charges with the click of a button!",
     "technologies": ["TypeScript", "React Native", "Redux", "Firebase"],
     "app_store_link": "https://apple.co/3qYGOWu",
     "play_store_link": "https://play.google.com/store/apps/details?id=com.tonenchereimmo"

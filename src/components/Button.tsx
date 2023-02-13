@@ -1,11 +1,4 @@
-import {
-  StyleSheet,
-  Text,
-  View,
-  Button as RNButton,
-  Pressable,
-  useWindowDimensions,
-} from "react-native";
+import { StyleSheet, Text, Pressable, useWindowDimensions } from "react-native";
 import React from "react";
 import { colors, typography } from "../styles";
 
