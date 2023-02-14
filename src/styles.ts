@@ -25,9 +25,10 @@ export const typography = (fontScale: number) =>
       color: colors.white,
     },
     sp: {
-      fontSize: 12 / fontScale,
+      fontSize: 13 / fontScale,
       lineHeight: 19 / fontScale,
       fontFamily: "FiraCode-Regular",
+      color: colors.white,
     },
   });
 

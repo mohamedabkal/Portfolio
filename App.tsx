@@ -7,6 +7,7 @@ import Contact from "./src/components/Contact";
 import { useRef } from "react";
 import { colors } from "./src/styles";
 import WhyMe from "./src/components/WhyMe";
+import Footer from "./src/components/Footer";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -14,12 +15,12 @@ export default function App() {
     "FiraCode-Regular": require("./assets/fonts/FiraCode-Regular.ttf"),
   });
 
-  const { height } = Dimensions.get("screen");
+  const { height } = Dimensions.get("window");
 
   const scrollViewRef = useRef<ScrollView>(null);
 
   const scrollToPortfolio = () => {
-    scrollViewRef.current?.scrollTo({ x: 0, y: height, animated: true });
+    scrollViewRef.current?.scrollToEnd({ animated: true });
   };
 
   return (
@@ -30,6 +31,7 @@ export default function App() {
         <Portfolio />
         <WhyMe />
         <Contact />
+        <Footer />
       </ScrollView>
     </View>
   );
@@ -38,6 +40,5 @@ export default function App() {
 const styles = StyleSheet.create({
   container: {
     alignItems: "center",
-    paddingBottom: 250,
   },
 });

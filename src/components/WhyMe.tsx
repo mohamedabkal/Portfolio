@@ -47,7 +47,7 @@ const styles = StyleSheet.create({
   },
   innerContainer: {
     flex: 1,
-    marginVertical: 32,
+    marginVertical: 24,
     gap: 16,
   },
   strength: {

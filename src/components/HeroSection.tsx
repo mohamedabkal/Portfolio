@@ -1,19 +1,24 @@
-import { Dimensions, StyleSheet, Text, View } from "react-native";
+import { Dimensions, Linking, StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { colors, commanyStyles, typography } from "../styles";
 import Button from "./Button";
 import CodeBlock from "./CodeBlock";
 
 export default function HeroSection(props: { scrollToPortfolio: () => void }) {
-  const { height, width, fontScale } = Dimensions.get("screen");
+  const { height, width, fontScale } = Dimensions.get("window");
 
   const bigTitleStyle = [
     typography(fontScale).h2,
     { lineHeight: 55 / fontScale },
   ];
 
+  const downloadResume = () =>
+    Linking.openURL(
+      "https://drive.google.com/uc?export=download&id=1crcdp4Q7IgkfZrqJaa882MKMsOElaYEC"
+    );
+
   return (
-    <View style={[styles.container, { height: height < 800 ? 800 : height }]}>
+    <View style={[styles.container]}>
       <CodeBlock name="AboutMe">
         <View style={{ flex: 1, marginVertical: 24 }}>
           <Text style={bigTitleStyle}>
@@ -31,7 +36,7 @@ export default function HeroSection(props: { scrollToPortfolio: () => void }) {
       </CodeBlock>
       <View style={[styles.buttons, { gap: width < 400 ? 8 : 16 }]}>
         <Button
-          title="View Portfolio"
+          title="Get In Touch"
           onPress={props.scrollToPortfolio}
           color={colors.dark}
         />
@@ -40,6 +45,7 @@ export default function HeroSection(props: { scrollToPortfolio: () => void }) {
           color={colors.white}
           bgColor={colors.dark}
           borderColor={colors.white}
+          onPress={downloadResume}
         />
       </View>
     </View>
@@ -51,10 +57,12 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     maxWidth: 550,
     paddingHorizontal: 16,
+    marginBottom: 150,
+    marginTop: 60,
   },
   buttons: {
     ...commanyStyles.row,
-    marginTop: 56,
+    marginTop: 32,
     flexWrap: "wrap",
   },
 });

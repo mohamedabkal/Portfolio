@@ -21,7 +21,7 @@ export default function Contact() {
   return (
     <View style={styles.container}>
       <CodeBlock name="GetInTouch">
-        <View style={{ flex: 1, marginVertical: 32, gap: 32 }}>
+        <View style={styles.innerContainer}>
           <Text style={typography(fontScale).p}>
             Whether you want to build a new mobile app from scratch, update an
             existing app, or troubleshoot technical issues, I'm here to help.
@@ -55,5 +55,10 @@ const styles = StyleSheet.create({
     maxWidth: 550,
     paddingHorizontal: 16,
     marginTop: 150,
+  },
+  innerContainer: {
+    flex: 1,
+    marginVertical: 24,
+    gap: 32,
   },
 });

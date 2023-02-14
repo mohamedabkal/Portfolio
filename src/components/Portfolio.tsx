@@ -59,7 +59,7 @@ export default function Portfolio() {
   return (
     <View style={styles.container}>
       <CodeBlock name="Portfolio">
-        <View style={{ flex: 1, marginVertical: 60, gap: 60 }}>
+        <View style={{ flex: 1, marginVertical: 24, gap: 60 }}>
           {projects.map((project) => (
             <RenderProject key={project.id} item={project} />
           ))}
